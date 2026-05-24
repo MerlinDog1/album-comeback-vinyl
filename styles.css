@@ -324,22 +324,23 @@ a:focus-visible {
 
   .hero {
     grid-template-columns: 1fr;
-    min-height: auto;
+    min-height: calc(100svh - 72px);
     padding-top: 0;
-    background: #050505;
+    background:
+      linear-gradient(180deg, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0.12) 42%, rgb(0 0 0 / 0.72) 68%, #000 100%),
+      url("./assets/mobile-hero.jpg") center top / cover no-repeat,
+      #050505;
   }
 
   .hero-image {
-    display: block;
-    min-height: 52svh;
-    background:
-      linear-gradient(180deg, rgb(0 0 0 / 0.02), rgb(0 0 0 / 0.28)),
-      url("./assets/hero-wide.jpg") 36% center / cover no-repeat;
+    display: none;
   }
 
   .hero-copy {
     grid-column: 1;
-    min-height: auto;
+    justify-content: flex-start;
+    min-height: calc(100svh - 72px);
+    padding-top: max(52svh, 340px);
   }
 
   .vinyl-row {
@@ -382,12 +383,9 @@ a:focus-visible {
     padding-top: 0;
   }
 
-  .hero-image {
-    min-height: 48svh;
-  }
-
   .hero-copy {
-    padding: 34px 20px 44px;
+    min-height: calc(100svh - 92px);
+    padding: max(52svh, 330px) 20px 44px;
   }
 
   h1 {
