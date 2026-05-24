@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register interest for a possible limited vinyl pressing of Album Title."
+    />
+    <meta property="og:title" content="Album Title returns" />
+    <meta
+      property="og:description"
+      content="The album is coming back to streaming. A limited vinyl pressing may follow if enough fans want one."
+    />
+    <meta property="og:image" content="./assets/vinyl-campaign.svg" />
+    <title>Album Title Returns | Vinyl Interest</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <a class="wordmark" href="#top" aria-label="Album Title home">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <span>Album Title</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#vinyl">Vinyl</a>
+        <a href="#updates">Updates</a>
+        <a href="#register">Register</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Returning to streaming on [date]</p>
+          <h1 id="hero-title">Album Title returns.</h1>
+          <p class="lead">
+            After several years out of print and unavailable on streaming,
+            <em>Album Title</em> is finally coming back.
+          </p>
+          <p>
+            We are also exploring a limited vinyl edition for later this year.
+            This is not confirmed yet. We are gauging interest before committing
+            to production.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#register">Register interest</a>
+            <a class="button secondary" href="#vinyl">How it works</a>
+          </div>
+        </div>
+
+        <figure class="campaign-visual" aria-label="Vinyl campaign visual">
+          <img
+            src="./assets/vinyl-campaign.svg"
+            alt="Limited vinyl edition campaign artwork with a record sleeve and black vinyl record"
+          />
+          <figcaption>Limited vinyl edition may happen if demand is there.</figcaption>
+        </figure>
+      </section>
+
+      <section class="statement" id="vinyl" aria-labelledby="vinyl-title">
+        <div>
+          <p class="eyebrow">No obligation. No payment now.</p>
+          <h2 id="vinyl-title">Help work out whether a pressing is viable.</h2>
+        </div>
+        <div class="statement-body">
+          <p>
+            If enough people want one, we will open a short pre-order window in
+            the autumn. The record will only be pressed if the minimum number of
+            orders is reached.
+          </p>
+          <p>
+            Register your interest below and you will be the first to know if
+            pre-orders go live.
+          </p>
+        </div>
+      </section>
+
+      <section class="steps" aria-label="Campaign steps">
+        <article>
+          <span>01</span>
+          <h3>Register interest</h3>
+          <p>
+            Tell us whether you would likely pre-order, might be interested, or
+            just want album updates.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Vinyl update</h3>
+          <p>
+            If demand looks strong, we will share specs, artwork direction,
+            likely pricing, and production timing.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Short pre-order</h3>
+          <p>
+            A two-week campaign opens. If the minimum target is reached, the
+            record is pressed.
+          </p>
+        </article>
+      </section>
+
+      <section class="register-section" id="register" aria-labelledby="register-title">
+        <div class="form-intro">
+          <p class="eyebrow">Join the vinyl list</p>
+          <h2 id="register-title">Register interest</h2>
+          <p>
+            This is not a commitment to buy. It simply helps us understand
+            whether a small vinyl run is possible.
+          </p>
+          <ul class="proof-list" aria-label="Campaign promises">
+            <li>Expected price range can be shared before pre-orders open.</li>
+            <li>Pre-ordering will be the only way to guarantee a copy.</li>
+            <li>We will not press the record unless the campaign target is met.</li>
+          </ul>
+        </div>
+
+        <form class="interest-form" id="interest-form">
+          <div class="field">
+            <label for="interest">Would you be interested in a vinyl edition?</label>
+            <select id="interest" name="interest" required>
+              <option value="">Choose one</option>
+              <option>Yes, I would likely pre-order</option>
+              <option>Maybe, depending on price/design</option>
+              <option>I just want album/news updates</option>
+            </select>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="country">Country</label>
+              <input id="country" name="country" type="text" autocomplete="country-name" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="price">Expected price comfort</label>
+            <select id="price" name="price">
+              <option>£28-£35 plus shipping feels okay</option>
+              <option>I would need final specs first</option>
+              <option>Only interested if it is cheaper</option>
+            </select>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required />
+            <span>
+              I agree to be contacted about this album, the possible vinyl
+              pressing, and related updates.
+            </span>
+          </label>
+
+          <button class="button primary full" type="submit">Register interest</button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite">
+            No payment. No commitment. Just a signal that helps decide whether
+            this can happen.
+          </p>
+        </form>
+      </section>
+
+      <section class="updates" id="updates" aria-labelledby="updates-title">
+        <p class="eyebrow">Email sequence</p>
+        <h2 id="updates-title">What fans hear next</h2>
+        <div class="timeline">
+          <p><strong>Announcement:</strong> the album is back on streaming, vinyl might happen, register interest.</p>
+          <p><strong>Vinyl update:</strong> enough interest to explore properly, likely specs, mockups, and price range.</p>
+          <p><strong>Pre-order live:</strong> two-week window, minimum order target, final-day reminders only if useful.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Album Title · Limited vinyl demand test</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
