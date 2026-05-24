@@ -1,5 +1,5 @@
 const FORM_ENDPOINT = "";
-const STORAGE_KEY = "album-title-vinyl-interest";
+const STORAGE_KEY = "liam-dullaghan-vinyl-interest";
 
 const form = document.querySelector("#interest-form");
 const note = document.querySelector("#form-note");
@@ -40,8 +40,7 @@ form.addEventListener("submit", async (event) => {
 
   submitButton.disabled = true;
   submitButton.textContent = "Registering...";
-  note.classList.remove("success");
-  note.classList.remove("error");
+  note.classList.remove("success", "error");
   note.textContent = "Sending your interest...";
 
   try {
@@ -56,11 +55,11 @@ form.addEventListener("submit", async (event) => {
     note.textContent = FORM_ENDPOINT
       ? "Done. You are on the vinyl interest list."
       : "Demo saved on this device. Add a form endpoint in script.js for live email capture.";
-  } catch (error) {
+  } catch {
     note.classList.add("error");
     note.textContent = "Something went wrong. Please try again in a moment.";
   } finally {
     submitButton.disabled = false;
-    submitButton.textContent = "Register interest";
+    submitButton.textContent = "Register";
   }
 });

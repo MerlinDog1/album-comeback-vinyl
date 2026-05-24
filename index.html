@@ -5,86 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Album Title is returning to streaming. Register interest for updates and a possible limited vinyl pressing."
+      content="Liam Dullaghan's Making History, remastered and streaming now."
     />
-    <meta property="og:title" content="Album Title" />
+    <meta property="og:title" content="Liam Dullaghan - Making History" />
     <meta
       property="og:description"
-      content="Streaming return, vinyl interest, and album updates."
+      content="Remastered, featuring extra tracks from the original sessions and one brand new unreleased song."
     />
     <meta property="og:image" content="./assets/studio-photo.jpg" />
-    <title>Album Title</title>
+    <title>Liam Dullaghan - Making History</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="link-page" aria-labelledby="page-title">
-      <section class="profile">
-        <img
-          class="profile-photo"
-          src="./assets/studio-photo.jpg"
-          alt="Black and white studio photograph of a musician sitting with a guitar"
-        />
-        <p class="kicker">Returning to streaming on [date]</p>
-        <h1 id="page-title">Album Title</h1>
-        <p class="bio">
-          The album is coming back. A limited vinyl edition may follow later
-          this year if enough people want one.
-        </p>
-      </section>
-
-      <nav class="link-stack" aria-label="Album links">
-        <a class="link-button primary" href="#register">
-          <span>Register vinyl interest</span>
-          <span aria-hidden="true">&rarr;</span>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Liam Dullaghan home">Liam Dullaghan</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#stream">Stream</a>
+        <a href="#vinyl">Vinyl</a>
+        <a class="icon-link" href="#" aria-label="Facebook">
+          <span aria-hidden="true">f</span>
         </a>
-        <a class="link-button" href="#" aria-label="Listen when Album Title returns to streaming">
-          <span>Listen / pre-save</span>
-          <span aria-hidden="true">&rarr;</span>
+        <a class="icon-link" href="#" aria-label="Instagram">
+          <span aria-hidden="true">ig</span>
         </a>
-        <a class="link-button" href="#details">
-          <span>How the vinyl run works</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="link-button" href="mailto:hello@example.com">
-          <span>Contact</span>
-          <span aria-hidden="true">&rarr;</span>
+        <a class="icon-link" href="mailto:hello@example.com" aria-label="Email Liam Dullaghan">
+          <span aria-hidden="true">@</span>
         </a>
       </nav>
+    </header>
 
-      <section class="mini-panel" id="register" aria-labelledby="register-title">
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Streaming now</p>
+          <h1 id="hero-title">
+            <span>Liam Dullaghan</span>
+            <span>Making History</span>
+          </h1>
+          <p class="lead">
+            Remastered, featuring 3 extra tracks from the original sessions and
+            one brand new unreleased song.
+          </p>
+
+          <div class="stream-icons" id="stream" aria-label="Streaming services">
+            <a href="#" aria-label="Listen on Spotify">
+              <span aria-hidden="true">S</span>
+            </a>
+            <a href="#" aria-label="Listen on Apple Music">
+              <span aria-hidden="true">AM</span>
+            </a>
+            <a href="#" aria-label="Listen on YouTube Music">
+              <span aria-hidden="true">YT</span>
+            </a>
+            <a href="#" aria-label="Listen on Amazon Music">
+              <span aria-hidden="true">a</span>
+            </a>
+            <a href="#" aria-label="Listen on Bandcamp">
+              <span aria-hidden="true">bc</span>
+            </a>
+          </div>
+
+          <a class="cta" href="#vinyl">Register interest for vinyl pre-order</a>
+        </div>
+      </section>
+
+      <section class="vinyl-row" id="vinyl" aria-labelledby="vinyl-title">
         <div>
-          <p class="kicker">No payment now</p>
-          <h2 id="register-title">Join the list</h2>
+          <p class="eyebrow">Limited vinyl edition</p>
+          <h2 id="vinyl-title">Register interest</h2>
           <p>
-            This is not a commitment to buy. It just helps work out whether a
-            small pressing is viable.
+            No obligation and no payment now. If enough people want one, a short
+            pre-order window will open before any pressing is confirmed.
           </p>
         </div>
 
         <form class="interest-form" id="interest-form">
-          <label for="interest">Vinyl interest</label>
-          <select id="interest" name="interest" required>
-            <option value="">Choose one</option>
-            <option>Yes, I would likely pre-order</option>
-            <option>Maybe, depending on price/design</option>
-            <option>I just want album/news updates</option>
-          </select>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-
-          <button class="submit-button" type="submit">Register interest</button>
+          <label for="email">Email address</label>
+          <div class="email-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit">Register</button>
+          </div>
           <p class="form-note" id="form-note" role="status" aria-live="polite">
-            No obligation. No payment. Just album and vinyl updates.
+            Placeholder form. Connect this to your email platform when ready.
           </p>
         </form>
-      </section>
-
-      <section class="details" id="details" aria-label="Vinyl campaign details">
-        <p>
-          If enough people register, a short pre-order window opens in the
-          autumn. The record is only pressed if the minimum order target is met.
-        </p>
       </section>
     </main>
 
