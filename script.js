@@ -41,6 +41,7 @@ form.addEventListener("submit", async (event) => {
   submitButton.disabled = true;
   submitButton.textContent = "Registering...";
   note.classList.remove("success");
+  note.classList.remove("error");
   note.textContent = "Sending your interest...";
 
   try {
@@ -56,6 +57,7 @@ form.addEventListener("submit", async (event) => {
       ? "Done. You are on the vinyl interest list."
       : "Demo saved on this device. Add a form endpoint in script.js for live email capture.";
   } catch (error) {
+    note.classList.add("error");
     note.textContent = "Something went wrong. Please try again in a moment.";
   } finally {
     submitButton.disabled = false;

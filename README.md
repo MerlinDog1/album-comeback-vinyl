@@ -1,6 +1,6 @@
-# Album Comeback Vinyl Interest Page
+# Album Comeback Link Page
 
-Static landing page for gauging demand before opening a limited vinyl pre-order campaign.
+Static Linktree-style page for an album streaming return, simple fan links, and a compact vinyl interest form.
 
 ## Configure
 
@@ -8,7 +8,8 @@ Replace the placeholder copy in `index.html`:
 
 - `Album Title`
 - `[date]`
-- expected pricing and campaign details
+- listen / pre-save URL
+- contact email
 
 For real email capture, set `FORM_ENDPOINT` in `script.js` to a Formspree, Mailchimp, ConvertKit, Airtable, or serverless endpoint. When blank, the form runs in demo mode and saves submissions only in the visitor's browser.
 
