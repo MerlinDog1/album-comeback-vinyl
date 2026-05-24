@@ -111,14 +111,33 @@ a {
   min-height: 100svh;
   padding-top: 72px;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0.16) 42%, rgb(0 0 0 / 0.78) 66%, #000 100%),
-    url("./assets/hero-wide.jpg") center / cover no-repeat,
-    #050505;
+  background: #000;
 }
 
 .hero-image {
   display: none;
+}
+
+.desktop-history-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 0.1) 0%, rgb(0 0 0 / 0.2) 42%, rgb(0 0 0 / 0.78) 66%, #000 100%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.04) 0%, rgb(0 0 0 / 0.22) 100%);
 }
 
 .mobile-history-mask {
@@ -334,6 +353,10 @@ a:focus-visible {
   }
 
   .hero-image {
+    display: none;
+  }
+
+  .desktop-history-mask {
     display: none;
   }
 
